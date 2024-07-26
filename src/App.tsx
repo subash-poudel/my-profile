@@ -1,11 +1,10 @@
+import AppHeader from "./components/AppHeader";
 import "./index.css"
+
 function App() {
   return (
-    <>
-      <h1 className="text-blue-700 font-bold  text-normal">
-        Welcome to Tailwind CSS Installation Tutorial.
-      </h1>
-
+    <div className="p-6">
+      <AppHeader />
       <div className="flex justify-center pt-20">
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg">
           <a href="https://tailwindcss.com/">
@@ -23,7 +22,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
