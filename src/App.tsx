@@ -1,19 +1,21 @@
-import AppHeader from "./components/AppHeader";
-import { Introduction } from "./components/Introduction";
-import Skills from "./components/skills/Skills";
+import Home from "./components/home/Home";
 import "./index.css";
-import Card from "./widgets/Card";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/projects",
+    element: <p>My projects</p>,
+  },
+]);
 
 function App() {
-  return (
-    <div className="p-6">
-      <AppHeader />
-      <Introduction />
-      <Card>
-        <Skills />
-      </Card>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
